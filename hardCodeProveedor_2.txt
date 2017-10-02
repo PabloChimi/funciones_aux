@@ -1,0 +1,26 @@
+eProveedor proveedores[]= { {1,"Proveedor A"}, {2,"Proveedor B"}, {3,"Proveedor C"},{4,"Proveedor D"},{5,"Proveedor E"}, {6,"Proveedor F"},{7,"Proveedor G"},{8,"Proveedor H"},{9,"Proveedor I"},{10,"Proveedor J"}};
+
+
+
+/*Otra manera de hacerlo*/
+
+void cargarProveedores(eProveedor proveedores[]); //Prototipo
+
+cargarProveedores(proveedores); //Llamada
+
+void cargarProveedores(eProveedor proveedores[])
+{
+    int i;
+
+    int idProveedor[]={1,2,3,4,5,6,7,8,9,10};
+    char descripcion[][51]={"Proveedor A","Proveedor B","Proveedor C","Proveedor A","Proveedor A","Proveedor A","Proveedor A","Proveedor A","Proveedor A","Proveedor A"};
+    int estado[]={1,1,1,1,1,1,1,1,1,1};
+
+     for(i=0; i<10;i++){
+        proveedores[i].codigo = idProveedor[i];
+        strcpy(proveedores[i].descripcion, descripcion[i]);
+        proveedores[i].estado = estado[i];
+    }
+
+    return;
+}
